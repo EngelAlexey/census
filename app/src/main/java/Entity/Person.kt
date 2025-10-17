@@ -20,8 +20,28 @@ class Person {
     private var longitude: Int = 0
     private lateinit var photo: Bitmap
 
-    constructor(name: String, fLastName: String, sLastName: String, phone: Int, email: String,
+    constructor(id: String, name: String, fLastName: String, sLastName: String, phone: Int, email: String,
                 datOfBirth: Date, province: Province, state: String, district: String, address: String, latitude: Int, longitude: Int, photo: Bitmap)
+
+    {
+
+        this.id=id
+        this.name=name
+        this.fLastName=flastname
+        this.sLastName=slastname
+        this.phone=phone
+        this.email=email
+        this.dayOfBirth=datOfBirth
+        this.province=province
+        this.state=state
+        this.district=district
+        this.address=address
+
+    }
+
+    var Id: String
+        get() = this.name
+        set(value) {this.name = value}
 
     var Name: String
         get() = this.name
