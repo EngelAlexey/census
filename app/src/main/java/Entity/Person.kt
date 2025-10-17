@@ -17,4 +17,6 @@ class Person {
     private var latitude:           Int     =0
     private var longitude:          Int     =0
     private lateinit var photo:     Bitmap
+
+    constructor(name: String)
 }
