@@ -4,6 +4,7 @@ import Data.IDataManager
 import Data.MemoryDataManager
 import Entity.Person
 import android.content.Context
+import com.example.census.R
 
 class PersonController {
 
@@ -18,9 +19,56 @@ class PersonController {
         try {
             dataManager.add(person)
         } catch (e: Exception){
-            throw e
+            throw Exception(context.getString(R.string.ErrorMsgAdd))
         }
+    }
 
+    fun updatePerson(person: Person){
+        try {
+            dataManager.update(person)
+        } catch (e: Exception){
+            throw Exception(context.getString(R.string.ErrorMsgUpdate))
+        }
+    }
+
+    fun removePerson(person: Person){
+        try {
+            dataManager.remove(person.Id)
+        } catch (e: Exception){
+            throw Exception(context.getString(R.string.ErrorMsgRemove))
+        }
+    }
+
+    fun getAllPerson(): List<Person>{
+        try {
+            return dataManager.getAll()
+        } catch (e: Exception){
+            throw Exception(context.getString(R.string.ErrorMsgGetAll))
+        }
+    }
+
+    fun getByIdPerson(id: String): Person {
+        try {
+            var result = dataManager.getById(id)
+            if (result == null){
+                throw Exception(context.getString(R.string.ErrorMsgGetById))
+            }
+            return result
+        } catch (e: Exception){
+            throw Exception(context.getString(R.string.ErrorMsgGetById))
+        }
+    }
+
+    fun getByFullName(id: String): Person {
+        try {
+            var result = dataManager.getByFullName(id)
+            if (result == null){
+                throw Exception(context.getString(R.string.ErrorMsgGetById))
+            }
+            return result
+        } catch (e: Exception){
+            throw Exception(context.getString(R.string.ErrorMsgGetById))
+        }
     }
 
 }
