@@ -27,8 +27,8 @@ class Person {
 
         this.id=id
         this.name=name
-        this.fLastName=flastname
-        this.sLastName=slastname
+        this.fLastName=fLastName
+        this.sLastName=sLastName
         this.phone=phone
         this.email=email
         this.dayOfBirth=datOfBirth
