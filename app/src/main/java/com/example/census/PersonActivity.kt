@@ -10,10 +10,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import org.w3c.dom.Text
 
 class PersonActivity : AppCompatActivity() {
 
-    lateinit var txtId: EditText
+    lateinit var TextId: EditText
     lateinit var TextName: EditText
     lateinit var TextFLastName: EditText
     lateinit var TextSLastName: EditText
@@ -34,7 +35,8 @@ class PersonActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        txtId = findViewById<EditText>(R.id.inpId_person)
+
+        TextId = findViewById<EditText>(R.id.inpId_person)
         TextName = findViewById<EditText>(R.id.inpName_person)
         TextFLastName = findViewById<EditText>(R.id.inpFLastName_person)
         TextSLastName = findViewById<EditText>(R.id.inpSLastName_person)
@@ -57,6 +59,16 @@ class PersonActivity : AppCompatActivity() {
     }
     fun savePerson(){
         try {
+            val person = Person()
+            person.Id = TextId.text.toString()
+            person.Name = TextName.text.toString()
+            person.FLastName = TextFLastName.text.toString()
+            person.SLastName = TextName.text.toString()
+            person.Email = TextEmail.text.toString()
+            person.State = TextState.text.toString()
+            person.District = TextDistrict.text.toString()
+            person.Address = TextAddress.text.toString()
+
             if (validationData() == true){
 
             } else {
