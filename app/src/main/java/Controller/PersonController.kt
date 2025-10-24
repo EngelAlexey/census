@@ -31,9 +31,14 @@ class PersonController {
         }
     }
 
-    fun removePerson(person: Person){
+    fun removePerson(id: String){
         try {
-            dataManager.remove(person.Id)
+            val result = dataManager.getById(id)
+
+            if(result == null){
+                throw Exception(context.getString(R.string.MsgDataNotFound))
+            }
+            dataManager.remove(id)
         } catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgRemove))
         }

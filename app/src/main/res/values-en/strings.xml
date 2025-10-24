@@ -4,6 +4,21 @@
     <string name="ErrorMsgAdd">Error when adding the data</string>
     <string name="ErrorMsgUpdate">Error when updating the data</string>
     <string name="ErrorMsgRemove">Error when removing the data</string>
-    <string name="ErrorMsgGetAll">No found data</string>
+    <string name="ErrorMsgGetAll">Data not found</string>
     <string name="ErrorMsgGetById">No found the person</string>
+    <string name="MsgDataNotFound">Data not found</string>
+    <string name="btnPersonText_main">Add person</string>
+    <string name="btnPeopleText_main">List people</string>
+    <string name="TextName">Name</string>
+    <string name="TextID">Identification</string>
+    <string name="TextFLastName">First last name</string>
+    <string name="TextSLastName">Second last name</string>
+    <string name="TextEmail">Email address</string>
+    <string name="TextPhone">Cellphone number</string>
+    <string name="TextPhoto">Photo</string>
+    <string name="TextProvince">Province</string>
+    <string name="TextState">State</string>
+    <string name="TextAddress">Address</string>
+    <string name="TextDistrict">District</string>
+    <string name="TextBirthdate">Birthdate</string>
 </resources>
