@@ -20,6 +20,8 @@ class Person {
     private var longitude: Int = 0
     private lateinit var photo: Bitmap
 
+    constructor()
+
     constructor(id: String, name: String, fLastName: String, sLastName: String, phone: Int, email: String,
                 datOfBirth: Date, province: Province, state: String, district: String, address: String, latitude: Int, longitude: Int, photo: Bitmap)
 

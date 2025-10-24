@@ -21,4 +21,5 @@
     <string name="TextAddress">Address</string>
     <string name="TextDistrict">District</string>
     <string name="TextBirthdate">Birthdate</string>
+    <string name="MsgAddPerson">Save</string>
 </resources>

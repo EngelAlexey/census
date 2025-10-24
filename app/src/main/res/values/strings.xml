@@ -20,4 +20,5 @@
     <string name="TextAddress">Dirección</string>
     <string name="TextDistrict">Distrito</string>
     <string name="TextBirthdate">Fecha de nacimiento</string>
+    <string name="MsgAddPerson">Guardar</string>
 </resources>

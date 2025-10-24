@@ -1,7 +1,11 @@
 package com.example.census
 
+import Entity.Person
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -41,5 +45,26 @@ class PersonActivity : AppCompatActivity() {
         TextAddress = findViewById<EditText>(R.id.inpAddress_person)
         TextDistrict = findViewById<EditText>(R.id.inpDistrict_person)
         TextBirthdate = findViewById<EditText>(R.id.inpBirthdate_person)
+
+        var btnSave = findViewById<Button>(R.id.btnAdd_person)
+        btnSave.setOnClickListener { View.OnClickListener {view ->
+            savePerson()
+        } }
+    }
+
+    fun validationData(): Boolean{
+        return true
+    }
+    fun savePerson(){
+        try {
+            if (validationData() == true){
+
+            } else {
+                //Toast.makeText(this, e.message.toString(), Toast.LENGTH_LONG).show()
+            }
+
+        } catch (e: Exception){
+            Toast.makeText(this, e.message.toString(), Toast.LENGTH_LONG).show()
+        }
     }
 }
