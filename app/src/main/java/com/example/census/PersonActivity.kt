@@ -1,5 +1,6 @@
 package com.example.census
 
+import Controller.PersonController
 import Entity.Person
 import android.os.Bundle
 import android.view.View
@@ -70,7 +71,8 @@ class PersonActivity : AppCompatActivity() {
             person.Address = TextAddress.text.toString()
 
             if (validationData() == true){
-
+                var personController = PersonController(this)
+                personController.addPerson(person)
             } else {
                 //Toast.makeText(this, e.message.toString(), Toast.LENGTH_LONG).show()
             }
